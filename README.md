@@ -33,3 +33,9 @@ cd <project_directory>
   ```
   docker-compose up --build
   ```
+
+  ### SQL DUMP
+  ``` 
+  https://drive.google.com/file/d/1cOtSa4NLADh2n3c1zaBFxlCO9s8XLjjL/view?usp=sharing
+  
+  ```
