@@ -1,0 +1,47 @@
+databaseChangeLog:
+ - changeSet:
+    id: create-jobs-table
+    author: Denys Mazurenko
+    changes:
+      - createTable:
+          tableName: jobs
+          columns:
+            - column:
+                name: id
+                type: bigint
+                autoIncrement: true
+                constraints:
+                  primaryKey: true
+                  nullable: false
+            - column:
+                name: external_id
+                type: bigint
+                constraints:
+                  nullable: false
+            - column:
+                name: company_id
+                type: bigint
+                constraints:
+                  foreignKeyName: fk_companies_jobs
+                  nullable: false
+            - column:
+                name: name
+                type: varchar(255)
+                constraints:
+                  nullable: false
+            - column:
+                name: description
+                type: text
+                constraints:
+                  nullable: false
+            - column:
+                name: link_to_apply
+                type: varchar(255)
+                constraints:
+                  nullable: false
+            - column:
+                name: tags
+                type: varchar(255)
+            - column:
+                name: created_at
+                type: INT

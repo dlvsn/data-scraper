@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-jobs-job-functions-table
+      author: Denys Mazurenko
+      changes:
+      - createTable:
+          tableName: jobs_job_functions
+          columns:
+            - column:
+                name: job_id
+                type: bigint
+                constraints:
+                  foreignKeyName: fk_jobs_job_functions_jobs
+                  references: jobs(id)
+                  nullable: false
+                  deleteCascade: false
+            - column:
+                name: job_function_id
+                type: bigint
+                constraints:
+                  foreignKeyName: fk_jobs_job_functions_job_functions
+                  references: job_functions(id)
+                  nullable: false
+                  deleteCascade: false

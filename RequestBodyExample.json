@@ -1,0 +1,9 @@
+{
+  "filters" : {
+    "job_functions" : [],
+    "searchable_locations" : []
+  },
+  "hitsPerPage" : 20,
+  "page" : 2,
+  "query" : ""
+}
